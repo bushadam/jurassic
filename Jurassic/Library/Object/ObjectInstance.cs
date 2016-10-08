@@ -1250,7 +1250,8 @@ namespace Jurassic.Library
                 // Make sure the method has the [JSInternalFunction] attribute.
                 var attribute = (JSFunctionAttribute)Attribute.GetCustomAttribute(method, typeof(JSFunctionAttribute));
                 if (attribute == null)
-                    continue;
+                    //continue;
+                    attribute = new JSFunctionAttribute();
 
                 // Determine the name of the method.
                 string name;
